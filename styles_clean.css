@@ -1,0 +1,247 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+    height: auto;
+    overflow: auto;
+}
+
+/* Allow scrolling on other pages */
+body.other-page {
+    height: auto;
+    overflow: auto;
+}
+
+/* Homepage now allows scrolling */
+body.homepage {
+    height: auto;
+    overflow: auto;
+}
+
+/* Language toggle */
+.language-toggle {
+    margin-left: auto;
+}
+
+.lang-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Header and Navigation */
+header {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #1e3a8a;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 1rem 3rem;
+    gap: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #1d4ed8;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Hero Section */
+.hero {
+    padding: 3rem 3rem;
+    background: white;
+}
+
+.profile-container {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.photo-section {
+    flex: 0 0 auto;
+}
+
+.profile-photo {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #e5e7eb;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.biography-section {
+    flex: 1;
+    padding-left: 2rem;
+}
+
+.biography-section h1 {
+    color: #1e3a8a;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.biography-section p {
+    color: #374151;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* RTL Navigation Layout */
+[dir="rtl"] nav {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+[dir="rtl"] nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    order: 2;
+}
+
+[dir="rtl"] nav li {
+    margin: 0 1rem;
+}
+
+[dir="rtl"] .nav-center {
+    order: 2;
+}
+
+[dir="rtl"] .language-toggle {
+    margin-right: auto;
+    margin-left: 0;
+    order: 1;
+}
+
+/* Ensure RTL text alignment for Farsi navigation */
+[dir="rtl"] nav a {
+    text-align: right;
+    direction: rtl;
+}
+
+body[dir="rtl"] .profile-container {
+    flex-direction: row-reverse;
+}
+
+body[dir="rtl"] .biography-section p {
+    text-align: justify;
+    direction: rtl;
+}
+
+/* Footer */
+.page-footer {
+    background-color: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+.page-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    nav a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .biography-section {
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    .profile-photo {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .biography-section h1 {
+        font-size: 32px;
+        margin-bottom: 1rem;
+    }
+    
+    .biography-section p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 0.8rem;
+    }
+}

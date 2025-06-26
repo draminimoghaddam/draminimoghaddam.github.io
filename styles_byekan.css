@@ -1,0 +1,206 @@
+/* Reset and base styles */
+
+/* BYekan Font Face */
+@font-face {
+    font-family: 'BYekan';
+    src: url('persian fonts/BYekan.eot');
+    src: url('persian fonts/BYekan.eot?#iefix') format('embedded-opentype'),
+         url('persian fonts/BYekan.woff') format('woff'),
+         url('persian fonts/BYekan.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+    height: auto;
+    overflow: auto;
+}
+
+/* Allow scrolling on other pages */
+body.other-page {
+    height: auto;
+    overflow: auto;
+}
+
+/* Homepage now allows scrolling */
+body.homepage {
+    height: auto;
+    overflow: auto;
+}
+
+/* Language toggle */
+.language-toggle {
+    margin-left: auto;
+}
+
+.lang-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Header and Navigation */
+header {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #1e3a8a;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 1rem 3rem;
+    gap: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #1d4ed8;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* RTL support for Farsi */
+body[dir="rtl"] {
+    font-family: 'BYekan', 'Tahoma', 'Arial', sans-serif;
+}
+
+/* RTL Navigation Layout */
+[dir="rtl"] nav {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+[dir="rtl"] nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    order: 2;
+}
+
+[dir="rtl"] nav li {
+    margin: 0 1rem;
+}
+
+[dir="rtl"] .nav-center {
+    order: 2;
+}
+
+[dir="rtl"] .language-toggle {
+    margin-right: auto;
+    margin-left: 0;
+    order: 1;
+}
+
+/* Ensure RTL text alignment for Farsi navigation */
+[dir="rtl"] nav a {
+    text-align: right;
+    direction: rtl;
+}
+
+/* Ensure proper font for Farsi text in navigation */
+[dir="rtl"] nav a,
+[dir="rtl"] nav li,
+[dir="rtl"] .lang-btn {
+    font-family: 'BYekan', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body[dir="rtl"] .profile-container {
+    flex-direction: row-reverse;
+}
+
+body[dir="rtl"] .biography-section p {
+    text-align: justify;
+    direction: rtl;
+}
+
+/* Comprehensive BYekan Font for All Farsi Content */
+.bio-fa h1,
+.bio-fa p,
+.education-fa ul,
+.education-fa li,
+.message-fa p {
+    font-family: 'BYekan', 'Tahoma', 'Arial', sans-serif !important;
+}
+
+/* Contact page Farsi elements */
+[dir="rtl"] .contact-name,
+[dir="rtl"] .contact-title,
+[dir="rtl"] .contact-specialty,
+[dir="rtl"] .contact-org,
+[dir="rtl"] .contact-item-simple h4,
+[dir="rtl"] .contact-message p {
+    font-family: 'BYekan', 'Tahoma', 'Arial', sans-serif !important;
+}
+
+/* Footer Farsi text */
+[dir="rtl"] .page-footer p {
+    font-family: 'BYekan', 'Tahoma', 'Arial', sans-serif !important;
+}
+
+/* All Farsi content sections */
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6,
+[dir="rtl"] p,
+[dir="rtl"] li,
+[dir="rtl"] span,
+[dir="rtl"] div {
+    font-family: 'BYekan', 'Tahoma', 'Arial', sans-serif;
+}
+
+/* Make sure numbers and English text remain readable */
+[dir="rtl"] .contact-item-simple p {
+    font-family: 'BYekan', monospace, 'Tahoma', sans-serif;
+}

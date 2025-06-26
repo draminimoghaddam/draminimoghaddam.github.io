@@ -1,0 +1,1293 @@
+/* Additional styles for enhanced layout */
+
+/* Publications page styles */
+.publications-header {
+    background: white;
+    padding: 2rem 3rem;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.publications-header h1 {
+    color: #1e3a8a;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.publications-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.publication-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 1px solid #e5e7eb;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+
+.publication-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.pub-number {
+    font-weight: 700;
+    color: #1e3a8a;
+    font-size: 1.1rem;
+    min-width: 30px;
+}
+
+.pub-image {
+    flex: 0 0 100px;
+}
+
+.pub-thumbnail {
+    width: 100px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+    background: #f3f4f6;
+}
+
+.pub-details {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    padding-bottom: 2rem; /* Space for delete button */
+}
+
+.pub-citation {
+    color: #374151;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.pub-citation strong {
+    color: #1e3a8a;
+}
+
+.pub-citation em {
+    font-style: italic;
+}
+
+.pub-citation .pub-link {
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.pub-citation .pub-link:hover {
+    text-decoration: underline;
+}
+
+.pub-year {
+    color: #374151;
+    font-size: 1rem;
+    white-space: nowrap;
+    align-self: flex-end;
+    margin-top: 0.5rem;
+}
+
+/* Simplified publications layout - no numbering */
+.publications-grid .publication-item {
+    background: white !important;
+    padding: 1.5rem !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+    border: 1px solid #e5e7eb !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    display: flex !important;
+    gap: 1rem !important;
+    position: relative !important;
+}
+
+.publications-grid .publication-item:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
+}
+
+.publications-grid .pub-image {
+    flex: 0 0 100px !important;
+}
+
+.publications-grid .pub-thumbnail {
+    width: 100px !important;
+    height: 130px !important;
+    object-fit: cover !important;
+    border-radius: 6px !important;
+    border: 1px solid #e5e7eb !important;
+    background: #f3f4f6 !important;
+}
+
+.publications-grid .pub-details {
+    flex: 1 !important;
+    padding-bottom: 2rem !important;
+}
+
+.publications-grid .pub-citation {
+    color: #374151 !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    text-align: justify !important;
+}
+
+.publications-grid .pub-citation strong {
+    color: #1e3a8a !important;
+}
+
+.publications-grid .pub-citation em {
+    font-style: italic !important;
+}
+
+.publications-grid .pub-title-link {
+    color: #374151 !important;
+    text-decoration: none !important;
+}
+
+.publications-grid .pub-title-link:hover {
+    text-decoration: none !important;
+    color: #374151 !important;
+}
+
+.publications-grid .pub-title-link strong {
+    color: #374151 !important;
+}
+
+/* Media timeline styles - override previous styles */
+.media-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    padding: 2rem !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+}
+
+.media-item {
+    background: white !important;
+    padding: 0 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+    border: 1px solid #e5e7eb !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    display: flex !important;
+    overflow: hidden !important;
+}
+
+.media-item:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
+}
+
+.media-date-badge {
+    background: #1e3a8a;
+    color: white;
+    padding: 1.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.media-content {
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.media-content .media-description {
+    color: #374151;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.media-content .media-link {
+    display: inline-block;
+    background: #1e3a8a;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-right: 0.5rem;
+}
+
+.media-content .media-link:hover {
+    background: #1d4ed8;
+}
+
+/* Media page styles with logos */
+.media-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.media-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 1px solid #e5e7eb;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.media-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.media-logo {
+    flex-shrink: 0;
+}
+
+.logo-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+.radio-logo {
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+}
+
+.tv-logo {
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+}
+
+.media-content {
+    flex: 1;
+}
+
+.media-title {
+    color: #1e3a8a;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+    line-height: 1.4;
+}
+
+.media-subtitle {
+    color: #1e3a8a;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-style: italic;
+    margin: 0.25rem 0;
+}
+
+.media-date {
+    color: #6b7280;
+    font-size: 0.85rem;
+    margin: 0.25rem 0 0 0;
+    font-style: italic;
+}
+
+.episode-titles {
+    margin-top: 0.5rem;
+}
+
+.episode-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.episode-list li {
+    color: #4b5563;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 0.25rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.episode-list li:before {
+    content: "•";
+    color: #1e3a8a;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Footer improvements */
+.page-footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding: 0.5rem 1rem;
+    background: rgba(30, 58, 138, 0.95);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+    transition: left 0.3s ease, right 0.3s ease;
+    margin-top: 2rem;
+}
+
+/* In RTL mode, position footer on the right */
+[dir="rtl"] .page-footer {
+    left: auto;
+    right: 0;
+}
+
+.page-footer p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.7rem;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Ensure main content doesn't overlap footer */
+body.other-page main {
+    padding-bottom: 3rem;
+}
+
+body.homepage main {
+    padding-bottom: 0;
+}
+
+body.homepage .hero {
+    min-height: auto;
+}
+
+/* Contact page styles */
+.contact-section {
+    padding: 2rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-container {
+    width: 100%;
+}
+
+.contact-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    border: 1px solid #e5e7eb;
+    text-align: center;
+    min-width: 600px;
+}
+
+.contact-info-main {
+    margin-bottom: 1.5rem;
+}
+
+.contact-name {
+    color: #1e3a8a;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.contact-card .contact-title {
+    color: #1e3a8a;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.contact-card .contact-specialty {
+    color: #374151;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.contact-card .contact-org {
+    color: #6b7280;
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.contact-methods-simple {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-item-simple {
+    text-align: center;
+}
+
+.contact-item-simple h4 {
+    color: #1e3a8a;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.contact-item-simple p {
+    color: #374151;
+    font-size: 16px;
+    margin: 0;
+    font-family: monospace;
+    font-weight: 500;
+}
+
+.contact-message {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1.5rem;
+}
+
+.contact-message p {
+    color: #374151;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    text-align: center;
+}
+
+
+
+/* RTL Homepage Contact Section */
+[dir="rtl"] .home-contact-section {
+    direction: rtl;
+}
+
+[dir="rtl"] .contact-person,
+[dir="rtl"] .location-details,
+[dir="rtl"] .services-list,
+[dir="rtl"] .contact-middle {
+    text-align: right;
+}
+
+[dir="rtl"] .contact-whatsapp,
+[dir="rtl"] .contact-office,
+[dir="rtl"] .contact-email {
+    direction: ltr;
+    text-align: right;
+}
+
+/* RTL Contact Page Styles */
+[dir="rtl"] .contact-card {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .contact-info-main {
+    text-align: center;
+}
+
+[dir="rtl"] .contact-methods-simple {
+    direction: rtl;
+}
+
+[dir="rtl"] .contact-item-simple {
+    text-align: center;
+}
+
+[dir="rtl"] .contact-item-simple h4 {
+    flex-direction: row-reverse;
+    justify-content: center;
+    font-weight: bold;
+}
+
+[dir="rtl"] .contact-item-simple p {
+    direction: ltr;
+    text-align: center;
+    unicode-bidi: embed;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+[dir="rtl"] .contact-message {
+    text-align: right;
+    direction: rtl;
+}
+
+/* Education Section Styles */
+.education-section {
+    background: linear-gradient(135deg, #64748b, #475569);
+    color: white;
+    padding: 4rem 3rem;
+    margin: 0;
+}
+
+.education-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.education-content {
+    text-align: left;
+    direction: ltr;
+}
+
+.education-title {
+    text-align: left;
+    direction: ltr;
+}
+
+.education-title h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    text-align: left !important;
+    direction: ltr !important;
+}
+
+.education-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 2rem 0;
+}
+
+.education-details li {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.education-details li:before {
+    content: "•";
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.services-note {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.services-note p {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+}
+
+.services-note .cta-link {
+    display: inline-block;
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.services-note .cta-link:hover {
+    background-color: #2563eb;
+}
+
+/* Home Contact Section Styles */
+.home-contact-section {
+    background: #334155;
+    color: #e2e8f0;
+    padding: 4rem 3rem;
+    margin: 0;
+}
+
+.home-contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    gap: 1rem 2rem;
+    align-items: start;
+}
+
+.contact-left h3,
+.contact-right h3,
+.contact-middle h3 {
+    color: #94a3b8;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+
+.contact-person h3 {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.contact-phone,
+.contact-whatsapp,
+.contact-office,
+.contact-whatsapp,
+.contact-office,
+.contact-email {
+    color: #e2e8f0;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+}
+
+.location-details {
+    margin-top: 0;
+}
+
+.location-details h3 {
+    color: #94a3b8;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+
+.location-info h5 {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.location-info p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.3rem;
+    white-space: nowrap;
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6pt;
+    margin-top: 1rem;
+}
+
+.service-item {
+    color: white;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+.service-link {
+    color: white;
+    text-decoration: underline;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.service-link:hover {
+    color: #60a5fa;
+}
+
+.quick-links-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #475569;
+}
+
+.quick-links-section h3 {
+    color: #94a3b8;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.cta-link {
+    display: inline-block;
+    color: white;
+    text-decoration: underline;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.cta-link:hover {
+    color: #60a5fa;
+}
+
+.contact-map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-placeholder {
+    background: #475569;
+    border: 2px dashed #64748b;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    color: #94a3b8;
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-placeholder .map-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.map-placeholder p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Google Scholar section styles */
+.google-scholar-section {
+    background: #f8f9fa;
+    padding: 2rem 3rem;
+    text-align: center;
+    border-top: 1px solid #e5e7eb;
+}
+
+.scholar-note p {
+    color: #374151;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.scholar-link-text {
+    color: #1e3a8a;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.scholar-link-text:hover {
+    color: #1d4ed8;
+}
+
+/* Publication view link styles */
+.pub-view-link {
+    color: #1e3a8a;
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.pub-view-link:hover {
+    color: #1d4ed8;
+}
+
+/* Compact homepage bio for no-scroll fit */
+.biography-section, .bio-content {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 1vw;
+}
+
+.bio-content h1 {
+    font-size: 2.4rem;
+    margin-bottom: 0.7rem;
+}
+
+.bio-content p {
+    font-size: 1.25rem;
+    line-height: 1.75;
+    margin-bottom: 1.2rem;
+}
+
+@media (max-width: 1800px) {
+    .biography-section, .bio-content {
+        max-width: 99vw;
+        padding: 0 0.5rem;
+    }
+    .bio-content h1 {
+        font-size: 1.3rem;
+    }
+    .bio-content p {
+        font-size: 1.01rem;
+    }
+}
+
+/* Remove bullets from Farsi education section */
+.education-fa ul {
+    list-style: disc inside;
+    padding-left: 0;
+    padding-right: 0;
+    direction: rtl;
+    text-align: right;
+    list-style-position: inside;
+}
+.education-fa li {
+    padding-left: 0;
+    padding-right: 0.5em;
+    margin-bottom: 0.5rem;
+    text-align: right;
+    direction: rtl;
+}
+
+/* Ensure proper viewport handling */
+@media (max-width: 768px) {
+    .other-page {
+        overflow-x: hidden !important;
+    }
+}
+
+/* Media grid layout */
+.media-list {
+    padding: 2rem 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.media-row {
+    margin-bottom: 3rem;
+}
+
+.media-row-title {
+    color: #1e3a8a;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid #1e3a8a;
+    padding-bottom: 0.5rem;
+}
+
+.media-items-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.media-item-compact {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 1px solid #e5e7eb;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+    position: relative;
+}
+
+.media-item-compact:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.media-item-title {
+    color: #1e3a8a;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    line-height: 1.3;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.media-item-program {
+    color: #374151;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-style: italic;
+    margin: 0 0 1rem 0;
+    line-height: 1.3;
+}
+
+.media-logo-small {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.logo-icon-small {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+.media-date-compact {
+    color: #6b7280;
+    font-size: 0.85rem;
+    margin: 1rem 0 0 0;
+    font-style: italic;
+    line-height: 1.3;
+}
+
+/* Mobile responsiveness for media grid */
+@media (max-width: 1024px) {
+    .media-items-row {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .media-items-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .media-item-compact {
+        min-height: 160px;
+        padding: 1.2rem;
+    }
+    
+    .media-row-title {
+        font-size: 1.3rem;
+    }
+    
+    .media-item-title {
+        font-size: 0.9rem;
+    }
+    
+    .media-item-program {
+        font-size: 0.8rem;
+    }
+    
+    .logo-icon-small {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .media-date-compact {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .media-items-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .media-item-compact {
+        min-height: 140px;
+        padding: 1rem;
+    }
+}
+
+/* Mobile navigation styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .nav-center {
+        order: 2;
+    }
+    
+    nav ul {
+        order: 1;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    nav li {
+        margin: 0.25rem 0.5rem;
+    }
+    
+    nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .language-toggle {
+        order: 3;
+        margin-left: 0;
+    }
+    
+    .scholar-logo {
+        height: 30px;
+    }
+}
+
+/* Home Contact Section Responsive */
+@media (max-width: 768px) {
+    .home-contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .location-info p {
+        white-space: normal;
+        font-size: 0.9rem;
+    }
+    
+    .contact-left h3,
+    .contact-middle h3,
+    .contact-right h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-contact-section {
+        padding: 2rem 1rem;
+    }
+}
+
+/* New styles for contact-middle column */
+.contact-middle {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-middle h3 {
+    color: #94a3b8;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+[dir="rtl"] .contact-middle {
+    text-align: right;
+    direction: rtl;
+}
+
+.location-note {
+    font-style: italic;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.location-note em {
+    font-style: italic;
+}
+
+[dir="rtl"] .location-note {
+    text-align: right;
+    direction: rtl;
+}
+
+/* RTL Grid Layout */
+[dir="rtl"] .contact-header, 
+[dir="rtl"] .office-header, 
+[dir="rtl"] .services-header,
+[dir="rtl"] .contact-row1,
+[dir="rtl"] .contact-row2,
+[dir="rtl"] .contact-row3,
+[dir="rtl"] .contact-row4,
+[dir="rtl"] .office-row1,
+[dir="rtl"] .office-row2,
+[dir="rtl"] .office-row3,
+[dir="rtl"] .office-row4,
+[dir="rtl"] .services-row1,
+[dir="rtl"] .services-row2,
+[dir="rtl"] .services-row3,
+[dir="rtl"] .services-row4,
+[dir="rtl"] .services-row5 {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .service-item {
+    text-align: right;
+    margin-bottom: 6pt;
+}
+
+/* Individual column styling */
+.appearance-item .date {
+    font-style: italic;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.appearance-item .channel {
+    font-weight: 600;
+    color: #374151;
+}
+
+.appearance-item .topic {
+    font-style: italic;
+    color: #1f2937;
+    font-weight: 500;
+}
+
+/* RTL styling for appearance columns */
+[dir="rtl"] .appearance-item .date,
+[dir="rtl"] .appearance-item .channel,
+[dir="rtl"] .appearance-item .topic {
+    text-align: right;
+    direction: rtl;
+}
+
+/* RTL and right-aligned for Farsi education section and title */
+[dir="rtl"] .education-content {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .education-title {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .education-title h3 {
+    text-align: right !important;
+    direction: rtl !important;
+    margin-right: 0 !important;
+    margin-left: auto !important;
+}
+
+.education-fa {
+    direction: rtl;
+    text-align: right;
+}
+
+.education-fa ul {
+    direction: rtl;
+    text-align: right;
+    list-style: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.education-fa li {
+    list-style: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    position: static !important;
+}
+
+.education-fa li:before {
+    content: none !important;
+    display: none !important;
+}
+
+/* CRITICAL: Force English education title to left side - override all conflicting styles */
+html[dir="ltr"] .education-section,
+html[dir="ltr"] .education-container,
+html[dir="ltr"] .education-content,
+html[dir="ltr"] .education-title {
+    text-align: left !important;
+    direction: ltr !important;
+}
+
+html[dir="ltr"] .education-title h3 {
+    text-align: left !important;
+    direction: ltr !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    float: left;
+    clear: left;
+    width: 100%;
+}
+
+/* Additional override - ensure left alignment is maintained */
+body:not([dir="rtl"]) .education-section {
+    text-align: left !important;
+    direction: ltr !important;
+}
+
+body:not([dir="rtl"]) .education-title h3 {
+    text-align: left !important;
+    direction: ltr !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    position: relative;
+    left: 0;
+    right: auto;
+}
+
+/* When body dir is ltr specifically */
+body[dir="ltr"] .education-section,
+body[dir="ltr"] .education-container,
+body[dir="ltr"] .education-content,
+body[dir="ltr"] .education-title {
+    text-align: left !important;
+    direction: ltr !important;
+}
+
+body[dir="ltr"] .education-title h3 {
+    text-align: left !important;
+    direction: ltr !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
