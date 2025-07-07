@@ -1291,3 +1291,55 @@ body[dir="ltr"] .education-title h3 {
     margin-left: 0 !important;
     margin-right: auto !important;
 }
+
+/* Multi-volume book styling */
+.pub-image.multi-volume {
+    position: relative;
+    height: 180px;
+    width: 120px;
+    margin: 0 auto;
+}
+
+.pub-image.multi-volume .pub-thumbnail {
+    position: absolute;
+    width: 100px;
+    height: 140px;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pub-image.multi-volume .volume-1 {
+    top: 0;
+    z-index: 1;
+}
+
+.pub-image.multi-volume .volume-2 {
+    top: 13px;
+    z-index: 2;
+}
+
+.pub-image.multi-volume .volume-3 {
+    top: 26px;
+    z-index: 3;
+}
+
+.pub-image.multi-volume:hover .volume-1 {
+    transform: translateX(-50%) translateY(-5px);
+    z-index: 4;
+}
+
+.pub-image.multi-volume:hover .volume-2 {
+    transform: translateX(-50%) translateY(0px);
+    z-index: 4;
+}
+
+.pub-image.multi-volume:hover .volume-3 {
+    transform: translateX(-50%) translateY(5px);
+    z-index: 4;
+}
+    transform: rotate(8deg) translateX(5px);
+    z-index: 4;
+}
