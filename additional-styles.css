@@ -343,18 +343,26 @@
     left: 0;
 }
 
-/* Footer improvements */
+/* Footer improvements - MAIN FOOTER STYLES */
 .page-footer {
     position: relative;
     bottom: 0;
     left: 0;
-    padding: 0.5rem 1rem;
-    background: rgba(30, 58, 138, 0.95);
-    backdrop-filter: blur(5px);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    z-index: 1000;
-    transition: left 0.3s ease, right 0.3s ease;
+    right: 0;
+    width: 100%;
+    z-index: 9999;
+    overflow: hidden;
+    padding: 0.2rem 1rem;
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    color: white;
+    text-align: center;
     margin-top: 2rem;
+}
+
+.page-footer::after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
 /* In RTL mode, position footer on the right */
@@ -364,10 +372,11 @@
 }
 
 .page-footer p {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 0.7rem;
+    color: white;
+    font-size: 0.9rem;
     margin: 0;
     line-height: 1.2;
+    opacity: 0.9;
 }
 
 /* Ensure main content doesn't overlap footer */
@@ -377,6 +386,7 @@ body.other-page main {
 
 body.homepage main {
     padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 body.homepage .hero {
@@ -500,10 +510,15 @@ body.homepage .hero {
     direction: rtl;
 }
 
-[dir="rtl"] .contact-person,
-[dir="rtl"] .location-details,
-[dir="rtl"] .services-list,
-[dir="rtl"] .contact-middle {
+[dir="rtl"] .contact-column,
+[dir="rtl"] .office-column,
+[dir="rtl"] .services-column {
+    text-align: right;
+}
+
+[dir="rtl"] .contact-column h3,
+[dir="rtl"] .office-column h3,
+[dir="rtl"] .services-column h3 {
     text-align: right;
 }
 
@@ -647,86 +662,64 @@ body.homepage .hero {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto auto;
-    gap: 1rem 2rem;
+    gap: 2rem;
     align-items: start;
 }
 
-.contact-left h3,
-.contact-right h3,
-.contact-middle h3 {
+.contact-column h3,
+.office-column h3,
+.services-column h3 {
     color: #94a3b8;
     font-size: 24px;
     font-weight: 700;
     letter-spacing: 0.1em;
-    margin-bottom: 1.5rem;
-    height: 2rem;
-    display: flex;
-    align-items: center;
-    margin-top: 0;
+    margin-bottom: 2rem;
+    text-align: left;
 }
 
-.contact-person h3 {
+.contact-content h4 {
     color: white;
     font-size: 18px;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
 }
 
-.contact-phone,
-.contact-whatsapp,
-.contact-office,
+.contact-content p,
+.office-content p,
+.services-content p {
+    color: #e2e8f0;
+    font-size: 14px;
+    margin-bottom: 1.2rem;
+    line-height: 1.8;
+}
+
 .contact-whatsapp,
 .contact-office,
 .contact-email {
-    color: #e2e8f0;
-    font-size: 14px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.8;
 }
 
-.location-details {
-    margin-top: 0;
+.office-content p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
 }
 
-.location-details h3 {
+.location-note {
+    font-style: italic;
     color: #94a3b8;
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    margin-bottom: 1.5rem;
-    height: 2rem;
-    display: flex;
-    align-items: center;
-    margin-top: 0;
-}
-
-.location-info h5 {
-    color: white;
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-.location-info p {
-    color: #cbd5e1;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 0.3rem;
-    white-space: nowrap;
-}
-
-.services-list {
-    display: flex;
-    flex-direction: column;
-    gap: 6pt;
+    font-size: 0.9rem;
     margin-top: 1rem;
+    line-height: 1.6;
 }
 
-.service-item {
+.services-content .service-item {
     color: white;
     font-size: 14px;
-    margin: 0;
+    margin-bottom: 1rem;
     padding: 0;
+    line-height: 1.6;
 }
 
 .service-link {
@@ -871,26 +864,61 @@ body.homepage .hero {
 }
 
 /* Remove bullets from Farsi education section */
-.education-fa ul {
-    list-style: disc inside;
-    padding-left: 0;
-    padding-right: 0;
+.education-fa {
     direction: rtl;
     text-align: right;
-    list-style-position: inside;
 }
-.education-fa li {
-    padding-left: 0;
-    padding-right: 0.5em;
-    margin-bottom: 0.5rem;
-    text-align: right;
+
+.education-fa ul {
     direction: rtl;
+    text-align: right;
+    list-style: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 1rem 0 2rem 0;
+}
+
+.education-fa li {
+    list-style: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0.8rem;
+    position: static !important;
+    direction: rtl;
+    text-align: right;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.education-fa li:before {
+    content: none !important;
+    display: none !important;
 }
 
 /* Ensure proper viewport handling */
 @media (max-width: 768px) {
     .other-page {
         overflow-x: hidden !important;
+        width: 100vw;
+        max-width: 100%;
+    }
+    
+    .homepage {
+        overflow-x: hidden !important;
+        width: 100vw;
+        max-width: 100%;
+    }
+    
+    body {
+        overflow-x: hidden !important;
+        width: 100%;
+        max-width: 100vw;
+    }
+    
+    * {
+        box-sizing: border-box;
     }
 }
 
@@ -1083,26 +1111,104 @@ body.homepage .hero {
 
 /* Home Contact Section Responsive */
 @media (max-width: 768px) {
+    .home-contact-section {
+        padding: 2rem 1rem;
+    }
+    
     .home-contact-container {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
+        max-width: 100%;
     }
     
-    .location-info p {
-        white-space: normal;
-        font-size: 0.9rem;
+    .contact-column,
+    .office-column,
+    .services-column {
+        width: 100%;
+        max-width: 100%;
+        overflow-wrap: break-word;
     }
     
-    .contact-left h3,
-    .contact-middle h3,
-    .contact-right h3 {
+    .contact-column h3,
+    .office-column h3,
+    .services-column h3 {
         font-size: 20px;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+    .contact-content h4 {
+        font-size: 16px;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+    .contact-content p,
+    .office-content p,
+    .services-content p {
+        font-size: 13px;
+        margin-bottom: 0.8rem;
+        line-height: 1.6;
+        text-align: center;
+    }
+    
+    .office-content p {
+        white-space: normal;
+        font-size: 13px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .location-note {
+        font-size: 12px;
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+    
+    .services-content .service-item {
+        font-size: 13px;
+        margin-bottom: 0.8rem;
+        text-align: center;
     }
 }
 
 @media (max-width: 480px) {
     .home-contact-section {
-        padding: 2rem 1rem;
+        padding: 1.5rem 0.5rem;
+    }
+    
+    .home-contact-container {
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .contact-column h3,
+    .office-column h3,
+    .services-column h3 {
+        font-size: 18px;
+        margin-bottom: 0.8rem;
+    }
+    
+    .contact-content h4 {
+        font-size: 15px;
+        margin-bottom: 0.8rem;
+    }
+    
+    .contact-content p,
+    .office-content p,
+    .services-content p {
+        font-size: 12px;
+        margin-bottom: 0.6rem;
+        line-height: 1.5;
+    }
+    
+    .services-content .service-item {
+        font-size: 12px;
+        margin-bottom: 0.6rem;
+    }
+    
+    .location-note {
+        font-size: 11px;
     }
 }
 
@@ -1202,16 +1308,30 @@ body.homepage .hero {
     text-align: right;
 }
 
-[dir="rtl"] .education-title {
-    direction: rtl;
-    text-align: right;
+/* RTL Direction for education section in Farsi - HIGHEST SPECIFICITY */
+html[dir="rtl"] body .education-section,
+html[dir="rtl"] body .education-container,
+html[dir="rtl"] body .education-content,
+html[dir="rtl"] body .education-title {
+    direction: rtl !important;
+    text-align: right !important;
 }
 
-[dir="rtl"] .education-title h3 {
+html[dir="rtl"] body .education-title h3 {
     text-align: right !important;
     direction: rtl !important;
     margin-right: 0 !important;
     margin-left: auto !important;
+}
+
+/* Additional override with even higher specificity */
+html[dir="rtl"] body.homepage .education-section .education-container .education-content .education-title h3 {
+    text-align: right !important;
+    direction: rtl !important;
+    margin-right: 0 !important;
+    margin-left: auto !important;
+    display: block !important;
+    width: 100% !important;
 }
 
 .education-fa {
@@ -1225,6 +1345,7 @@ body.homepage .hero {
     list-style: none !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
+    margin: 1rem 0 2rem 0;
 }
 
 .education-fa li {
@@ -1233,7 +1354,12 @@ body.homepage .hero {
     padding-right: 0 !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
+    margin-bottom: 0.8rem;
     position: static !important;
+    direction: rtl;
+    text-align: right;
+    font-size: 16px;
+    line-height: 1.8;
 }
 
 .education-fa li:before {
@@ -1292,6 +1418,19 @@ body[dir="ltr"] .education-title h3 {
     margin-right: auto !important;
 }
 
+/* RTL styling for education details section */
+html[dir="rtl"] body .education-details {
+    direction: rtl !important;
+    text-align: right !important;
+    clear: both !important;
+    width: 100% !important;
+}
+
+html[dir="rtl"] body .education-details .education-fa {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
 /* Multi-volume book styling */
 .pub-image.multi-volume {
     position: relative;
@@ -1340,114 +1479,10 @@ body[dir="ltr"] .education-title h3 {
     transform: translateX(-50%) translateY(5px);
     z-index: 4;
 }
-    transform: rotate(8deg) translateX(5px);
-    z-index: 4;
-}
 
-/* Home contact section restructured for better mobile support */
-.home-contact-section {
-    padding: 60px 0;
-    background-color: #f8f9fa;
-}
+/* Home contact section - reverted to original dark theme */
 
-.home-contact-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-}
-
-.contact-column,
-.office-column,
-.services-column {
-    background: white;
-    padding: 30px 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.contact-column h3,
-.office-column h3,
-.services-column h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
-}
-
-.contact-content p,
-.office-content p,
-.services-content p {
-    margin-bottom: 12px;
-    line-height: 1.6;
-}
-
-.contact-content h4 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: #2c3e50;
-}
-
-.service-item {
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
-}
-
-.service-item:last-child {
-    border-bottom: none;
-}
-
-.location-note {
-    font-style: italic;
-    color: #7f8c8d;
-    font-size: 0.9rem;
-}
-
-/* Mobile responsive design */
-@media (max-width: 768px) {
-    .home-contact-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 0 15px;
-    }
-    
-    .contact-column,
-    .office-column,
-    .services-column {
-        padding: 20px 15px;
-    }
-    
-    .contact-column h3,
-    .office-column h3,
-    .services-column h3 {
-        font-size: 1.1rem;
-        margin-bottom: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .home-contact-section {
-        padding: 40px 0;
-    }
-    
-    .home-contact-container {
-        padding: 0 10px;
-        gap: 15px;
-    }
-    
-    .contact-column,
-    .office-column,
-    .services-column {
-        padding: 15px 10px;
-    }
-}
-
-/* Contact page mobile responsiveness */
+/* Contact page mobile responsiveness - removed visible boxes */
 .contact-methods-simple {
     display: flex;
     flex-direction: row;
@@ -1459,9 +1494,9 @@ body[dir="ltr"] .education-title h3 {
     flex: 1;
     text-align: center;
     padding: 20px;
-    background: #f8f9fa;
-    border-radius: 8px;
-    border: 1px solid #e9ecef;
+    background: transparent;
+    border: none;
+    border-radius: 0;
 }
 
 .contact-item-simple h4 {
@@ -1483,33 +1518,85 @@ body[dir="ltr"] .education-title h3 {
     margin: 0;
     font-size: 1rem;
     color: #34495e;
+    word-break: break-all;
+    overflow-wrap: break-word;
 }
 
 /* Mobile responsive design for contact page */
 @media (max-width: 768px) {
+    .contact-section {
+        padding: 1rem;
+        min-height: auto;
+        height: auto;
+    }
+    
+    .contact-card {
+        min-width: auto;
+        width: 100%;
+        max-width: 100%;
+        padding: 1.5rem 1rem;
+        margin: 0;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+    }
+    
+    .contact-name {
+        font-size: 22px;
+        line-height: 1.2;
+        word-wrap: break-word;
+    }
+    
+    .contact-card .contact-title {
+        font-size: 15px;
+        line-height: 1.3;
+    }
+    
+    .contact-card .contact-specialty {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+    
+    .contact-card .contact-org {
+        font-size: 13px;
+        line-height: 1.3;
+        word-wrap: break-word;
+    }
+    
     .contact-methods-simple {
         flex-direction: column;
         gap: 15px;
         margin-top: 20px;
+        width: 100%;
     }
     
     .contact-item-simple {
         padding: 15px;
         margin: 0;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .contact-item-simple h4 {
         font-size: 1rem;
         margin-bottom: 8px;
+        flex-wrap: wrap;
     }
     
     .contact-icon {
         width: 20px;
         height: 20px;
+        flex-shrink: 0;
     }
     
     .contact-item-simple p {
         font-size: 0.95rem;
+        word-break: break-all;
+        overflow-wrap: break-word;
+    }
+    
+    .contact-message p {
+        font-size: 15px;
+        line-height: 1.5;
     }
 }
 
@@ -1520,6 +1607,28 @@ body[dir="ltr"] .education-title h3 {
     
     .contact-card {
         padding: 20px 15px;
+        min-width: auto;
+        width: calc(100vw - 20px);
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .contact-name {
+        font-size: 20px;
+        word-break: break-word;
+    }
+    
+    .contact-card .contact-title {
+        font-size: 14px;
+    }
+    
+    .contact-card .contact-specialty {
+        font-size: 13px;
+    }
+    
+    .contact-card .contact-org {
+        font-size: 12px;
+        line-height: 1.3;
     }
     
     .contact-methods-simple {
@@ -1542,6 +1651,144 @@ body[dir="ltr"] .education-title h3 {
     }
     
     .contact-item-simple p {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        word-break: break-all;
+    }
+    
+    .contact-message p {
+        font-size: 14px;
+    }
+}
+
+/* Footer containment fix */
+.page-footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.page-footer::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* Prevent content from appearing below footer */
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+}
+
+/* Ensure main content doesn't extend beyond footer */
+main {
+    position: relative;
+    z-index: 1;
+}
+
+/* Fix for homepage layout */
+.homepage main {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.homepage .home-contact-section {
+    margin-bottom: 0;
+}
+
+/* Remove any floating elements that might extend below footer */
+.home-contact-section::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* Ensure home contact section doesn't overflow */
+.home-contact-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Critical fix to prevent any content below footer */
+.page-footer {
+    clear: both !important;
+    position: relative !important;
+    z-index: 9999 !important;
+}
+
+/* Hide any content that might appear after footer */
+.page-footer ~ * {
+    display: none !important;
+}
+
+/* Ensure body ends with footer */
+body::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* Force home contact section to stay above footer */
+.home-contact-section {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0 !important;
+}
+
+/* Ensure content order is preserved on mobile */
+@media (max-width: 768px) {
+    .contact-column {
+        order: 1;
+    }
+    
+    .office-column {
+        order: 2;
+    }
+    
+    .services-column {
+        order: 3;
+    }
+}
+
+/* Additional mobile optimization for no scrolling */
+@media (max-width: 480px) {
+    .homepage .hero,
+    .homepage main,
+    .homepage .home-contact-section {
+        min-height: auto;
+        height: auto;
+    }
+    
+    .contact-section {
+        min-height: auto;
+        height: auto;
+        display: block;
+    }
+    
+    .contact-container {
+        min-height: auto;
+        height: auto;
+    }
+}
+
+/* RTL mobile adjustments */
+@media (max-width: 768px) {
+    [dir="rtl"] .contact-column h3,
+    [dir="rtl"] .office-column h3,
+    [dir="rtl"] .services-column h3 {
+        text-align: center;
+    }
+    
+    [dir="rtl"] .contact-content h4,
+    [dir="rtl"] .contact-content p,
+    [dir="rtl"] .office-content p,
+    [dir="rtl"] .services-content p {
+        text-align: center;
     }
 }
