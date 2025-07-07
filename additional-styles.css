@@ -1792,3 +1792,135 @@ body::after {
         text-align: center;
     }
 }
+
+/* Mobile overflow fixes for Media, Books, and Publications sections */
+@media (max-width: 768px) {
+    /* Publications grid mobile fixes */
+    .publications-grid {
+        padding: 1rem;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .publication-item {
+        flex-direction: column;
+        padding: 1rem;
+        margin: 0;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .pub-image {
+        flex: none;
+        align-self: center;
+        margin-bottom: 1rem;
+    }
+    
+    .pub-thumbnail {
+        width: 80px;
+        height: 104px;
+    }
+    
+    .pub-details {
+        flex: 1;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .pub-citation {
+        margin-right: 0;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+    
+    /* Media list mobile fixes */
+    .media-list {
+        padding: 1rem;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .media-row {
+        margin-bottom: 2rem;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .media-items-row {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .media-item-compact {
+        max-width: 100%;
+        overflow-x: hidden;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+    
+    .media-item-title {
+        font-size: 0.9rem;
+        line-height: 1.3;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+    
+    .media-item-program {
+        font-size: 0.8rem;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+    
+    /* Books section mobile fixes */
+    .publication-item.sample-item {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .pub-image.multi-volume {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+        max-width: 100%;
+    }
+    
+    .pub-image.multi-volume .pub-thumbnail {
+        width: 60px;
+        height: 78px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small screen fixes */
+    .publications-grid {
+        padding: 0.5rem;
+    }
+    
+    .publication-item {
+        padding: 0.8rem;
+    }
+    
+    .pub-citation {
+        font-size: 0.85rem;
+    }
+    
+    .media-list {
+        padding: 0.5rem;
+    }
+    
+    .media-item-compact {
+        padding: 0.8rem;
+    }
+    
+    .media-item-title {
+        font-size: 0.85rem;
+    }
+    
+    .media-item-program {
+        font-size: 0.75rem;
+    }
+}
