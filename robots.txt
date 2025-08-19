@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://draminimoghaddam.github.io/sitemap.xml
+
+# Disallow certain file types that shouldn't be indexed
+Disallow: /*.css$
+Disallow: /*.js$
+Disallow: /README.md
+Disallow: /*.py$
+Disallow: /*.bat$
+Disallow: /requirements.txt
