@@ -1,5 +1,15 @@
 /* Additional styles for enhanced layout */
 
+/* Hide English-only elements when in Farsi mode */
+html[dir="rtl"] .english-only {
+    display: none !important;
+}
+
+/* Center contact items when in Farsi mode (when only one item is visible) */
+html[dir="rtl"] .contact-methods-simple {
+    justify-content: center;
+}
+
 /* Publications page styles */
 .publications-header {
     background: white;
