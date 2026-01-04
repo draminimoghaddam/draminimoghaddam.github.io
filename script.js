@@ -105,6 +105,10 @@ function updateLanguage() {
             languageToggle.style.order = '-1';
         }
         
+        // Hide English-only elements
+        const enOnlyElements = document.querySelectorAll('.en-only');
+        enOnlyElements.forEach(el => el.style.display = 'none');
+        
         // Show Farsi biography, hide English
         const bioEn = document.querySelector('.bio-en');
         const bioFa = document.querySelector('.bio-fa');
@@ -135,6 +139,10 @@ function updateLanguage() {
         if (languageToggle) {
             languageToggle.style.order = 'initial';
         }
+        
+        // Show English-only elements
+        const enOnlyElements = document.querySelectorAll('.en-only');
+        enOnlyElements.forEach(el => el.style.display = 'block');
         
         // Show English biography, hide Farsi
         const bioEn = document.querySelector('.bio-en');
